@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(img/bg2.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            backdrop-filter: blur(3px);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+
+        .product-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .product-item {
+            width: 45%;
+            text-align: center;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-details {
+            margin-top: 15px;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #2ecc71;
+            font-weight: bold;
+            margin: 10px 0px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .confirm-btn {
+            display: block;
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            border: none;
+            font-size: 18px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .confirm-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 style="font-size: 28px;">Order Confirmation</h1>
+    
+    <form action="thankyou.html">
+        <div class="product-gallery">
+            <div class="product-item">
+                <img src="vetements/bb1.jpg" alt="Clothing Item 1" class="product-image">
+                <input type="checkbox" name="product" value="bb1"> Select
+            </div>
+            <div class="product-item">
+                <img src="vetements/bb2.jpg" alt="Clothing Item 2" class="product-image">
+                <input type="checkbox" name="product" value="bb2"> Select
+            </div>
+            <div class="product-item">
+                <img src="vetements/bb3.jpg" alt="Clothing Item 3" class="product-image">
+                <input type="checkbox" name="product" value="bb3"> Select
+            </div>
+            <div class="product-item">
+                <img src="vetements/bb4.jpg" alt="Clothing Item 4" class="product-image">
+                <input type="checkbox" name="product" value="bb4"> Select
+            </div>
+        </div>
+
+        <label for="size">Choose Size:</label>
+        <select id="size" name="size">
+            <option value="S">Small (S)</option>
+            <option value="M">Medium (M)</option>
+            <option value="L">Large (L)</option>
+            <option value="XL">Extra Large (XL)</option>
+            <option value="XXL">Double Extra Large (XXL)</option>
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <label for="address">Shipping Address:</label>
+        <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+        <button type="submit" class="confirm-btn">Confirm Purchase</button>
+    </form>
+</div>
+
+</body>
+</html>

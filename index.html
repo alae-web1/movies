@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies & TV Shows</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+    background-image: url(img/bg10.jpg);
+    animation: change 35s infinite;
+}
+
+@keyframes change {
+    0% { background-image: url(img/bg10.jpg); }
+    20% { background-image: url(img/bg4.jpg); }
+    40% { background-image: url(img/bg3.jpg); }
+    60% { background-image: url(img/bg7.jpg); }
+    80% { background-image: url(img/bg4.jpg); }
+    100% { background-image: url(img/bg10.jpg); }
+}
+
+        header {
+            background-image: url(img/istockphoto-1732963074-612x612.webp);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .search-container {
+            margin-left: 10px; 
+        }
+
+        .search-container input {
+            padding: 5px;
+            font-size: 14px;
+            width: 200px; 
+            border-radius: 5px;
+            border: 1px solid white;
+        }
+
+        .menu-bar ul {
+            list-style: none;
+            text-align: right;
+            flex-grow: 1;
+            margin: 0;
+        }
+
+        .menu-bar ul li {
+            display: inline;
+            margin: 0 35px;
+        }
+
+        .menu-bar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .menu-bar ul li a:hover {
+            color: orangered;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .movieserie {
+            margin: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .movieserie img {
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .movieserie:hover {
+            transform: scale(1.1);
+        }
+
+        .movieserie h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        h1 {
+            margin: 80px 80px 0px;
+        }
+        a {
+        text-decoration: none; 
+        color: white;
+        }
+        @media (max-width: 768px) {
+    
+    .menu-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+
+    .menu-bar ul {
+        text-align: left;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .menu-bar ul li {
+        display: block;
+        margin: 5px 0;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px; 
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .movieserie {
+        width: 100%;
+        text-align: center;
+    }
+
+    .movieserie img {
+        width: 100%;
+        max-width: 180px;
+        height: auto;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <input type="search" placeholder="Search movies and series..." />
+        </div>
+        <nav class="menu-bar">
+            <ul>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#series">Series</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="movies">Movies</h1>
+        <section class="gallery">
+            <div class="movieserie">
+                <a href="fight club.html">
+                    <img src="img/fightclub.jpg">
+                    <h3>Fight Club</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="avatar.html">
+                    <img src="img/Avatar.jpg">
+                    <h3>Avatar</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="interstellar.html">
+                    <img src="img/interstellar.jpg">
+                    <h3>Interstellar</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="lord of the rings.html">
+                    <img src="img/lord of the rings.jpg">
+                    <h3>Lord Of The Rings</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="train to busan.html">
+                    <img src="img/train to busan.jpg">
+                    <h3>Train To Busan</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="maze runner.html">
+                    <img src="img/the maze runer.jpg">
+                    <h3>Maze Runner</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="conjuring.html">
+                    <img src="img/the conjuring.jpg">
+                    <h3>Conjuring</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="jumanji.html">
+                    <img src="img/jumanji.jpg">
+                    <h3>Jumanji</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="training day.html">
+                    <img src="img/training day.jpg">
+                    <h3>Training Day</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="spiderman.html">
+                    <img src="img/spider-man.jpg">
+                    <h3>Spider-Man</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="the nun.html">
+                    <img src="img/the nun.jpg">
+                    <h3>The Nun</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="titanic.html">
+                    <img src="img/titanic.jpg">
+                    <h3>Titanic</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="joker.html">
+                    <img src="img/joker.jpg">
+                    <h3>Joker</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="fall.html">
+                    <img src="img/fall.jpg">
+                    <h3>Fall</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="alive.html">
+                    <img src="img/alive.jpg">
+                    <h3>Alive</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="mr and mrs smith.html">
+                    <img src="img/mr and mrs smith.jpg">
+                    <h3>Mr And Mrs Smith</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="madmax.html">
+                    <img src="img/mad max.jpg">
+                    <h3>Mad Max</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="the godfather.html">
+                    <img src="img/The Godfather.jpg">
+                    <h3>The Godfather</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="inception.html">
+                    <img src="img/Inception.jpg">
+                    <h3>Inception</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="home alone.html">
+                    <img src="img/home alone.jpg">
+                    <h3>Home Alone</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="gladiator.html">
+                    <img src="img/gladiator.jpg">
+                    <h3>Gladiator</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="harry potter.html">
+                    <img src="img/Harry Potter.jpg">
+                    <h3>Harry Potter</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="john wick.html">
+                    <img src="img/John Wick.jpg">
+                    <h3>John Wick</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="venom.html">
+                    <img src="img/Venom.jpg">
+                    <h3>Venom</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="the beekeeper.html">
+                    <img src="img/The Beekeeper.jpg">
+                    <h3>The Beekeeper</h3>
+                </a>
+            </div>
+        </section>
+
+        <h1 id="series">Series</h1>
+        <section class="gallery">
+            <div class="movieserie">
+                <a href="game of thrones.html">
+                    <img src="img/Game of Thrones.jpg">
+                    <h3>Game of Thrones</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="the walking dead.html">
+                    <img src="img/The Walking Dead.jpg">
+                    <h3>The Walking Dead</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="breaking bad.html">
+                    <img src="img/Breaking Bad.jpg">
+                    <h3>Breaking Bad</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="lost.html">
+                    <img src="img/Lost.jpg">
+                    <h3>Lost</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="vikings.html">
+                    <img src="img/Vikings.jpg">
+                    <h3>Vikings</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="dark.html">
+                    <img src="img/Dark.jpg">
+                    <h3>Dark</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="sons of anarchy.html">
+                    <img src="img/Sons Of Anarchy.jpg">
+                    <h3>Sons Of Anarchy</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="peaky blinders.html">
+                    <img src="img/Peaky Blinders.jpg">
+                    <h3>Peaky Blinders</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="prison break.html">
+                    <img src="img/Prison Break.jpg">
+                    <h3>Prison Break</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="bcs.html">
+                    <img src="img/Better Call Saul.jpg">
+                    <h3>Better Call Saul</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="hotd.html">
+                    <img src="img/House Of The Dragon.jpg">
+                    <h3>House Of The Dragon</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="the sopranos.html">
+                    <img src="img/The Sopranos.jpg">
+                    <h3>The Sopranos</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="dexter.html">
+                    <img src="img/Dexter.jpg">
+                    <h3>Dexter</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="the last kingdom.html">
+                    <img src="img/The Last Kingdom.jpg">
+                    <h3>The Last Kingdom</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="stranger things.html">
+                    <img src="img/Stranger Things.jpg">
+                    <h3>Stranger Things </h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="banshee.html">
+                    <img src="img/Banshee.jpg">
+                    <h3>Banshee</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="the 100.html">
+                    <img src="img/The 100.jpg">
+                    <h3>The 100</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="from.html">
+                    <img src="img/From.jpg">
+                    <h3>From</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="obx.html">
+                    <img src="img/Outer Banks.jpg">
+                    <h3>Outer Banks</h3>
+                </a>
+            </div>
+            <div class="movieserie">
+                <a href="the punisher.html">
+                    <img src="img/The Punisher.jpg">
+                    <h3>The Punisher</h3>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
+    <style>
+        body {
+            background-image: url(img/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+
+        form {
+
+            backdrop-filter: blur(6px);
+        }
+
+        label {
+            position: relative;
+            right: 10px;
+        }
+
+        .label1 {
+            position: relative;
+            left: 0px;
+        }
+        #sexe{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="w-50">
+            <form action="index.html" class="border p-4 rounded-4 shadow-sm">
+                <h1 class="text-center mb-4">Login</h1>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address:</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email address">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label ">Password:</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary px-4">Login</button>
+                    <button type="reset" class="btn btn-danger px-4 ms-2">Cancel</button>
+                </div>
+                <div class="text-center mt-3">
+                    <p>Don't have an account? <a href="inscription.html" class="text-primary fw-bold">Sign up</a></p>
+                </div>                
+</body>
+</html>

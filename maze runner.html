@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Runner - Watch Now</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        header {
+            background-image: url(img/istockphoto-1732963074-612x612.webp);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .search-container {
+            margin-left: 10px; 
+        }
+
+        .search-container input {
+            padding: 5px;
+            font-size: 14px;
+            width: 200px; 
+            border-radius: 5px;
+            border: 1px solid white;
+        }
+
+        .menu-bar ul {
+            list-style: none;
+            text-align: right;
+            flex-grow: 1;
+            margin: 0;
+        }
+
+        .menu-bar ul li {
+            display: inline;
+            margin: 0 35px;
+        }
+
+        .menu-bar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .menu-bar ul li a:hover {
+            color: orangered;
+        }
+        .container {
+            margin-top: 80px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        video {
+            width: 80%; 
+            border-radius: 10px;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        .suggested {
+            position: relative;
+            margin: 40px auto;  
+            max-width: 1000px; 
+            border: 4px solid transparent;
+            border-image: linear-gradient(45deg, red, purple, blue, orangered) 1;
+            animation: borderm 3s linear infinite;
+            text-align: center;
+        }
+        @keyframes borderm {
+            0% { border-image-source: linear-gradient(0deg, red, purple, blue, orangered); }
+            25% { border-image-source: linear-gradient(90deg, red, purple, blue, orangered); }
+            50% { border-image-source: linear-gradient(180deg, red, purple, blue, orangered); }
+            75% { border-image-source: linear-gradient(270deg, red, purple, blue, orangered); }
+            100% { border-image-source: linear-gradient(360deg, red, purple, blue, orangered); }
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .movieserie {
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .movieserie img {
+            width: 150px;
+            height: 220px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .movieserie:hover {
+            transform: scale(1.1);
+        }
+
+        .movieserie h3 {
+            font-size: 16px;
+            margin-top: 8px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="search-container">
+        <input type="search" placeholder="Search movies and series..." />
+    </div>
+    <nav class="menu-bar">
+        <ul>
+            <li><a href="inerface.html#movies">Movies</a></li>
+            <li><a href="inerface.html#series">Series</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Maze Runner</h1>
+
+    <div class="video-container">
+        <video controls>
+            <source src="vid/Avatar_ The Way of Water .mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+<div class="suggested">
+    <h2>Suggested Movies</h2>
+    <section class="gallery">
+        <div class="movieserie">
+            <a href="fight club.html">
+                <img src="img/fightclub.jpg">
+                <h3>Fight Club</h3>
+            </a>
+        </div>
+        <div class="movieserie">
+            <a href="lord of the rings.html">
+                <img src="img/lord of the rings.jpg">
+                <h3>Lord Of The Rings</h3>
+            </a>
+        </div>
+        <div class="movieserie">
+            <a href="venom.html">
+                <img src="img/Venom.jpg">
+                <h3>Venom</h3>
+            </a>
+        </div>
+        <div class="movieserie">
+            <a href="jumanji.html">
+                <img src="img/jumanji.jpg">
+                <h3>Jumanji</h3>
+            </a>
+        </div>
+        <div class="movieserie">
+            <a href="interstellar.html">
+                <img src="img/interstellar.jpg">
+                <h3>Interstellar</h3>
+            </a>
+    </section>
+    <section class="gallery">
+        <div class="movieserie">
+            <a href="spider-man.html">
+                <img src="img/spider-man.jpg">
+                <h3>Spider-Man</h3>
+            </a>
+        </div>
+        <div class="movieserie">
+            <a href="titanic.html">
+                <img src="img/titanic.jpg">
+                <h3>Titanic</h3>
+            </a>
+        </div>
+        <div class="movieserie">
+            <a href="the godfather.html">
+                <img src="img/The Godfather.jpg">
+                <h3>The Godfather</h3>
+            </a>
+        </div>
+        <div class="movieserie">
+            <a href="john wick.html">
+                <img src="img/John Wick.jpg">
+                <h3>John Wick</h3>
+            </a>
+        </div>
+        <div class="movieserie">
+            <a href="the beekeeper.html">
+                <img src="img/The Beekeeper.jpg">
+                <h3>The Beekeeper</h3>
+            </a>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
